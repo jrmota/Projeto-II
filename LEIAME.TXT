@@ -1,0 +1,4 @@
+Para Executar o Projeto é necessário criar um Schema no MySQL chamado:
+    projii
+Script de Criacao
+        CREATE DATABASE `projii` /*!40100 DEFAULT CHARACTER SET utf8 */$$
