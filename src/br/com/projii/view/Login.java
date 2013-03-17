@@ -4,13 +4,9 @@
  */
 package br.com.projii.view;
 
-import br.com.projiistepi.jpa.Usuario;
-import br.com.projiistepi.jpa.UsuarioRepository;
+import br.com.projiistepi.model.Usuario;
+import br.com.projiistepi.model.UsuarioRepository;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
 import javax.swing.JOptionPane;
 
 /**
@@ -111,9 +107,9 @@ public class Login extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(rootPane, "Senha Invalida");
                 }
             }
+        }
             System.out.println("A Senha do Usuario form é : " + 
                     strSenha);
-        }
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

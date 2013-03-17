@@ -4,6 +4,8 @@
  */
 package br.com.projiistepi.jpa;
 
+import br.com.projiistepi.model.Usuario;
+import br.com.projiistepi.model.UsuarioRepository;
 import java.util.Scanner;
 
 /**
