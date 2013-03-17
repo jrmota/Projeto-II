@@ -5,6 +5,7 @@
 package br.com.projii.view;
 
 import br.com.projiistepi.jpa.Usuario;
+import br.com.projiistepi.jpa.UsuarioRepository;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -93,12 +94,9 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("usuario-pu");
-        EntityManager manager = factory.createEntityManager();
-
-        Query query = manager.createQuery("SELECT u FROM Usuario u");
-        List<Usuario> usuarios = query.getResultList();
+        UsuarioRepository ur = new UsuarioRepository();
+        
+        List<Usuario> usuarios = ur.buscaTodos();
         char[] senha;
         String strSenha = "";
         for (Usuario usr : usuarios) {
@@ -116,9 +114,6 @@ public class Login extends javax.swing.JFrame {
             System.out.println("A Senha do Usuario form é : " + 
                     strSenha);
         }
-
-        manager.close();
-        factory.close();
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
