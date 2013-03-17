@@ -17,18 +17,14 @@ import javax.persistence.Query;
  */
 public class Listando {
         public static void main (String args[]){
-        EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("usuario-pu");
-        EntityManager manager = factory.createEntityManager();
-
-        Query query = manager.createQuery("SELECT u FROM Usuario u");
-        List<Usuario> usuarios = query.getResultList();
+        UsuarioRepository ur = new UsuarioRepository();
+        
+        List<Usuario> usuarios = ur.buscaTodos();
 
         for (Usuario usr : usuarios) {
             System.out.println("O Nome do Usuario é : " + usr.getNome());
+            System.out.println("O Id do Usuario é : " + usr.getId());
         }
 
-        manager.close();
-        factory.close();
     }
 }

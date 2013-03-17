@@ -16,13 +16,11 @@ import javax.persistence.Query;
  */
 public class Buscando {
        public static void main (String args[]){
-        EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("usuario-pu");
-        EntityManager manager = factory.createEntityManager();
-
-        //TODO implementar codigo de busca
-
-        manager.close();
-        factory.close();
+        Usuario usuario = new Usuario();
+        UsuarioRepository ur = new UsuarioRepository();
+        
+        usuario = ur.busca(new Long(1));
+        
+        System.out.println(usuario.getNome());
     }
 }

@@ -4,13 +4,7 @@
  */
 package br.com.projiistepi.jpa;
 
-import java.util.List;
 import java.util.Scanner;
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
-import javax.persistence.Query;
-
 
 /**
  *
@@ -19,9 +13,7 @@ import javax.persistence.Query;
 public class Persistindo {
 
     public static void main(String args[]) {
-        EntityManagerFactory factory =
-                Persistence.createEntityManagerFactory("usuario-pu");
-        EntityManager manager = factory.createEntityManager();
+        UsuarioRepository ur = new UsuarioRepository();
 
         Scanner entrada = new Scanner(System.in);
 
@@ -31,12 +23,7 @@ public class Persistindo {
         System.out.println(" Digite a senha do usuario : ");
         usuario.setSenha(entrada.nextLine());
         
-        manager.persist(usuario);
+        ur.adiciona(usuario);
         
-        manager.getTransaction().begin();
-        manager.getTransaction().commit();
-
-        manager.close();
-        factory.close();
     }
 }
