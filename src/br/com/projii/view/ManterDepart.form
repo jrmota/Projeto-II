@@ -110,6 +110,9 @@
           <Dimension value="[90, 25]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBAtualizarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jBDeletar">
       <Properties>
@@ -163,6 +166,9 @@
           <Dimension value="[90, 25]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBCancelarActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

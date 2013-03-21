@@ -94,6 +94,11 @@ public class ManterDepart extends javax.swing.JPanel {
         jBAtualizar.setText("Atualizar");
         jBAtualizar.setName("jBAtualizar"); // NOI18N
         jBAtualizar.setPreferredSize(new java.awt.Dimension(90, 25));
+        jBAtualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBAtualizarActionPerformed(evt);
+            }
+        });
 
         jBDeletar.setText("Deletar");
         jBDeletar.setName("jBDeletar"); // NOI18N
@@ -122,6 +127,11 @@ public class ManterDepart extends javax.swing.JPanel {
         jBCancelar.setToolTipText("");
         jBCancelar.setName("jBCancelar"); // NOI18N
         jBCancelar.setPreferredSize(new java.awt.Dimension(90, 25));
+        jBCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBCancelarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -183,6 +193,25 @@ public class ManterDepart extends javax.swing.JPanel {
     private void jTFNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFNomeActionPerformed
+
+    private void jBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCancelarActionPerformed
+        // TODO add your handling code here:
+        jBAtualizar.setEnabled(true);
+        jBDeletar.setEnabled(true);
+        jBInserir.setEnabled(true);
+        
+        jTFId.setText("");
+        jTFNome.setText("");
+    }//GEN-LAST:event_jBCancelarActionPerformed
+
+    private void jBAtualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBAtualizarActionPerformed
+        // TODO add your handling code here:
+//        CategoriaRepository cr = new CategoriaRepository();
+//        Categoria c = cr.busca(new Long(jTFId.getText().toString()));
+//        c.setNome(jTFNome.getName());
+//        cr.Atualiza(c);
+        
+    }//GEN-LAST:event_jBAtualizarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBAtualizar;

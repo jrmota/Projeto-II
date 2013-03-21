@@ -48,6 +48,12 @@ public class UsuarioRepository {
         return u;
     }
     
+    public void Atualiza(Usuario u) {
+        inicializa();
+        this.manager.refresh(u);
+        finaliza();
+    }
+    
     public void deleta(Usuario u) {
         inicializa();
         if (u == null){

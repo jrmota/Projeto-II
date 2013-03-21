@@ -45,6 +45,15 @@ public class CategoriaRepository {
         return u;
     }
     
+    public void atualiza(Categoria c, String newNome) {
+        inicializa();
+        c.setNome(newNome);
+        manager.refresh(manager.merge(c));
+        manager.getTransaction().begin();
+        manager.getTransaction().commit();
+        finaliza();
+    }
+    
     public void deleta(Categoria u) {
         inicializa();
         if (u == null){
