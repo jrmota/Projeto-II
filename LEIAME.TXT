@@ -5,5 +5,9 @@ Script de Criacao
         CREATE DATABASE projii 
 
 Mudar de Browser para Outro Nome
-
+Documento de visao - Envolvidos no sistema, devem ser os mesmo do caso de uso.
+Sempre utilizar JPA EJB
 Mudar Nome de atores
+Mudar de model p control
+
+Ejb cuida da persistencia p mim
