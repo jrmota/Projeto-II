@@ -3,3 +3,7 @@ Para Executar o Projeto é necessário criar um Schema no MySQL chamado:
 Script de Criacao
         CREATE DATABASE `projii` /*!40100 DEFAULT CHARACTER SET utf8 */$$
         CREATE DATABASE projii 
+
+Mudar de Browser para Outro Nome
+
+Mudar Nome de atores
